@@ -9,10 +9,10 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" type="text/css" href="bower_components/materialize/dist/css/materialize.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -22,19 +22,37 @@
     <![endif]-->
 
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-      <li>HTML5 Boilerplate</li>
-      <li>Sass</li>
+    <div class="row">
 
-      </ul>
-    </div>
+      <div class="col s3 navbar">
+        <nav>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#!">Home</a></li>
+            <li><a href="#!">Game</a></li>
+            <li><a href="#!">Contact</a></li>
+          </ul>
+          <ul id="slide-out" class="side-nav">
+            <li><a href="#!">Home</a></li>
+            <li><a href="#!">Game</a></li>
+            <li><a href="#!">Contact</a></li>
+          </ul>
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </nav>
+      </div>
 
+      <div class="gamescreen col 9">
+        <div class="avo" id="avo1"></div>
+        <!-- <div class="avo" id="avo2"></div>
+        <div class="avo" id="avo3"></div>
+        <div class="avo" id="avo4"></div>
+        <div class="avo" id="avo5"></div>
+        <div class="avo" id="avo6"></div> -->
+      </div>
+  </div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

@@ -1,6 +1,8 @@
 // bower:scss
 // endbower
 
+//vars
+$avoimage : url("../images/avacado.png");
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -28,4 +30,30 @@ body {
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+//End Boilerplate CSS Begin custom
+.gamescreen {
+  background: url("../images/desertbg2.png") no-repeat;
+  // border: 1.5px solid black;
+  min-height: 600px;
+  min-width: 800px;
+  // left: 20%;
+  // height: 60%;
+  // top: 25%;
+  position: relative;
+  // text-align: center;
+  margin-bottom: 5%;
+  margin-top: 10%;
+
+}
+.avo {
+  background: $avoimage no-repeat;
+  position: absolute;
+  width: 40%;
+  height: 40%;
+
+}
+#avo1 {
+
 }
