@@ -2,7 +2,8 @@
 // endbower
 
 //vars
-$avoimage : url("../images/avacado.png");
+$avoimage : url("../images/avo.png");
+$guacImage : url("../images/guac.png");
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -45,15 +46,40 @@ body {
   // text-align: center;
   margin-bottom: 5%;
   margin-top: 10%;
+  // cursor: url("../images/hammer.png"), auto;
 
 }
 .avo {
   background: $avoimage no-repeat;
+  background-size: contain;
   position: absolute;
-  width: 40%;
-  height: 40%;
-
+  width: 10%;
+  height: 20%;
+}
+  //change to guacamole class
+.guacamole {
+    @extend .avo;
+    background-image: $guacImage;
 }
 #avo1 {
-
+  bottom: 4%;
+  left: 30%;
 }
+#avo2 {
+  left: 45%;
+  bottom: 5%;
+}
+#avo3 {
+  bottom: 10%;
+  left: 75%
+}
+#avo4 {
+  bottom: 20%;
+  left: 20%;
+}#avo5 {
+  bottom: 25%;
+  left: 45%;
+}#avo6 {
+  bottom: 10%;
+}
+
