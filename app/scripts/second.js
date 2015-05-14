@@ -19,28 +19,17 @@ $(function(){
   });
   }
 
-//click handler for turning avos into guac
+//click handler for turning avos into guac and disappearing and reappreaing
 function handleClick(id){
-    $(id).click(function(){
-      $(this).removeClass('avo').addClass('guacamole');
-      setTimeout(function(){
-        $('.guacamole').removeClass('guacamole').addClass('disappear');
-    console.log('stuff');
-      }, 1000);
-      setTimeout(function(){
-         $('div').each(function(){
-    if($(this).hasClass('disappear')){
-      $(this).addClass('avo').removeClass('disappear');
-      console.log('reset');
-    }
+  $(id).click(function(){
+    $(this).removeClass('avo').addClass('guacamole');
+    setTimeout(disappear, 1000);
+    setTimeout(reappear2, 3000);
+    // setTimeout(disappear(), 1500);
+    // setTimeout(reappear2(), 500);
+    // setTimeout(document.location.reload(true), 500);
   });
-       }, 1000);
-        // setTimeout(disappear(), 1500);
-        // setTimeout(reappear2(), 500);
-        // setTimeout(document.location.reload(true), 500);
-      });
-
-    }
+}
 
 handleClick('#avo1');
 handleClick('#avo2');
@@ -50,8 +39,9 @@ handleClick('#avo5');
 handleClick('#avo6');
 
 //Animate avos up and down
-// setTimeout($('#avo4').animateCSS("slideOutDown"), 1000);
-
+function animateUpDown(id){
+  // $(id).an
+}
 
 // clickToChange();
 
