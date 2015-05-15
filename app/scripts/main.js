@@ -1,16 +1,21 @@
 'use strict';
+
 $(function(){
 var score = 0;
 var runTime = 30;
 var gameTime = runTime;
-
+var userInput;
 var myTimer;
-var seconds;
+var easySeconds;
+var mediumSeconds;
+var fastSeconds;
 var showAvos;
  $('.button-collapse').sideNav();
+disappear();
 //handles the dissapearnce
   function disappear() {
     $('.guacamole').removeClass('guacamole').addClass('disappear');
+    $('.avo').removeClass('avo').addClass('disappear');
      console.log('stuff');
   }
 //handles the reappearnace
@@ -46,24 +51,26 @@ handleClick('#avo6');
 //Random Second generator
 
 function randomSeconds() {
-  seconds = Math.random() * 4000;
+  easySeconds = Math.random() * 3000;
+  mediumSeconds = Math.random() * 50;
+  fastSeconds = Math.random() * 0.0001;
   // console.log(seconds);
 }
 
 //Animate avos up and down
 function randomShow(){
   randomSeconds();
-  $('#avo1').delay(seconds).slideToggle('fast');
+  $('#avo1').delay(easySeconds).slideToggle('fast');
   randomSeconds();
-  $('#avo2').delay(seconds).slideToggle('fast');
+  $('#avo2').delay(easySeconds).slideToggle('fast');
   randomSeconds();
-  $('#avo3').delay(seconds).slideToggle('fast');
+  $('#avo3').delay(easySeconds).slideToggle('fast');
   randomSeconds();
-  $('#avo4').delay(seconds).slideToggle('fast');
+  $('#avo4').delay(easySeconds).slideToggle('fast');
   randomSeconds();
-  $('#avo5').delay(seconds).slideToggle('fast');
+  $('#avo5').delay(easySeconds).slideToggle('fast');
   randomSeconds();
-  $('#avo6').delay(seconds).slideToggle('fast');
+  $('#avo6').delay(easySeconds).slideToggle('fast');
 }
 function printScore(){
   $('#score').html('Score: ' + score);
@@ -105,8 +112,7 @@ $('#element_to_pop_up').bPopup({
       speed: 450,
       transition: 'slideIn',
       transitionClose: 'slideBack', //can be a string ('slow'/'fast') or int
-      followSpeed: 1500, //can be a string ('slow'/'fast') or int
-      modalColor: 'greenYellow',
+      followSpeed: 1500
     });
 }
 $('#startbutton').click(function(){
@@ -119,15 +125,33 @@ $('#startbutton').click(function(){
     console.log('working');
   }
 });
+// Difficulty button
+$('#easy').click(function(){
+  randomSeconds();
+  userInput = easySeconds;
+  console.log(easySeconds);
+});
+$('#medium').click(function(){
+  randomSeconds();
+  userInput = mediumSeconds;
+  console.log(mediumSeconds);
+});
+$('#fast').click(function(){
+  randomSeconds();
+  userInput = fastSeconds;
+  console.log(fastSeconds);
+});
+
 
 //loop to continuosly dissappear avos
 
 function startShow(){
-    showAvos = setInterval(randomShow, seconds);
+    showAvos = setInterval(randomShow, userInput);
 }
 function startGame(){
-  startShow();
+  startShow(userInput);
   myTimer = setInterval(timer, 1000);
+  reappear2();
 }
 
 

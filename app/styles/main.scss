@@ -123,7 +123,7 @@ body {
 //Misc signange - score timer, popup at end
 .sombrero{
   position: absolute;
-  top: -20px;
+  top: -5px;
   left: -25px;
 }
 #score {
@@ -150,6 +150,10 @@ body {
   left: 49%;
   position: absolute;
   top: 10%;
+}
+.dropdown-button {
+  @extend .startbutton;
+  left: 63%;
 }
 #timer {
   @extend #score;
