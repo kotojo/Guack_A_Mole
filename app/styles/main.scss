@@ -61,6 +61,7 @@ body {
     @extend .avo;
     background-image: $guacImage;
 }
+//Initial avacado positioning
 #avo1 {
   bottom: 4%;
   left: 30%;
@@ -82,4 +83,40 @@ body {
 }#avo6 {
   bottom: 10%;
 }
-
+//Misc signange - score timer, popup at end
+#score {
+  position: absolute;
+  left: 0.01%;
+  top: 0.2%;
+  padding: 4px;
+  width: 10%;
+}
+#timer {
+  @extend #score;
+  left: 40%;
+  width: 16%;
+}
+ #element_to_pop_up {
+  display:none;
+}
+.b-close {
+border-radius: 7px;
+font: bold 131% sans-serif;
+margin-left: 15%;
+background-color: #2b91af;
+color: #fff;
+cursor: pointer;
+text-align: center;
+text-decoration: none;
+position: absolute;
+width: 30%;
+height: 30%;
+// right: -7px;
+// top: -7px;
+}
+.b-close:hover {
+background-color: #1e1e1e;
+}
+button{
+  background: brown;
+}

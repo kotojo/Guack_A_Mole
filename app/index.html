@@ -14,6 +14,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/materialize/dist/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="bower_components/timecircles/inc/TimeCircles.css">
     <link rel="stylesheet" href="styles/main.css">
 
     <!-- endbuild -->
@@ -43,18 +44,23 @@
       </div>
 
       <div class="gamescreen col 9">
+        <div class="card-panel teal" id="score">Score:</div>
+        <div class="card-panel teal" id="timer">Time Left:</div>
         <div class="avo" id="avo1"></div>
         <div class="avo" id="avo2"></div>
         <div class="avo" id="avo3"></div>
         <div class="avo" id="avo4"></div>
         <div class="avo" id="avo5"></div>
         <div class="avo" id="avo6"></div>
+        <audio id="sound1" src="DM-CGS-33.wav"></audio>
+        <div class="b-close" id="element_to_pop_up">Game Over!<br><br><button on click="playAgain()" id="replay">Play Again</button><br><br>Home</div>
       </div>
   </div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery.bpopup.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
