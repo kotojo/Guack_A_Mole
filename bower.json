@@ -2,6 +2,8 @@
   "name": "avogame",
   "private": true,
   "dependencies": {
-    "jquery": "~1.11.1"
+    "jquery": "~1.11.1",
+    "materialize": "~0.96.1",
+    "bpopup": "~0.11.0"
   }
 }

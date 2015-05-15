@@ -1,7 +1,7 @@
 'use strict';
 $(function(){
 var score = 0;
-var runTime = 20;
+var runTime = 5;
 var gameTime = runTime;
 
 var myTimer;
@@ -77,7 +77,7 @@ function timer(){
     clearInterval(myTimer);
     console.log(gameTime);
     popupEndGame();
-  };
+  }
 }
 //resets score and time and clears scoreboard
 function resetGame (){
