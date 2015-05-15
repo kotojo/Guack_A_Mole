@@ -87,17 +87,36 @@ body {
 //holes
 
 .hole {
-  width: 10%;
-  height: 15%;
+  width: 5%;
+  height: 5%;
   background-image: url('../images/hole.png');
   background: rgba(215, 129, 4, 0.8);
-  border-radius: 90%;
   position: absolute;
   z-index: 0;
   -webkit-border-radius: 50px 50px;
 }
 #hole1{
   @extend #avo1;
+  left: 26.5%;
+}
+#hole2{
+  @extend #avo2;
+  left: 42.5%;
+}
+#hole3{
+  @extend #avo3;
+  left: 72.5%;
+}
+#hole4{
+  @extend #avo4;
+  left: 19%;
+}
+#hole5{
+  @extend #avo5;
+  left: 42%;
+}
+#hole6{
+  @extend #avo6;
 }
 
 
@@ -111,9 +130,22 @@ body {
   position: absolute;
   left: 0.01%;
   top: 0.2%;
-  padding: 4px;
-  width: 10%;
+  padding: 2px;
+  width: 14%;
+  border-radius: 2px;
+  display: inline-block;
+  height: 6%;
+  line-height: 36px;
+  outline: 0;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #FFF;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: 0.5px;
+
 }
+
 .startbutton{
   left: 49%;
   position: absolute;
@@ -122,8 +154,16 @@ body {
 #timer {
   @extend #score;
   left: 40%;
-  width: 16%;
+  width: 19%;
 }
+.scorecard{
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+}
+
  #element_to_pop_up {
   display:none;
 }

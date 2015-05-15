@@ -1,8 +1,9 @@
 'use strict';
 $(function(){
 var score = 0;
-var gameTime = 10;
 var runTime = 20;
+var gameTime = runTime;
+
 var myTimer;
 var seconds;
 var showAvos;
@@ -80,7 +81,7 @@ function timer(){
 }
 //resets score and time and clears scoreboard
 function resetGame (){
-  gameTime = 8;
+  gameTime = runTime;
   score = 0;
   $('#timer').html('Time Left: ' + gameTime + ' sec');
   $('#score').html('Score: ' + score);
@@ -109,9 +110,14 @@ $('#element_to_pop_up').bPopup({
     });
 }
 $('#startbutton').click(function(){
+  if(gameTime === runTime) {
   startGame();
   console.log('start clicked');
-  $('#startSound').get(0).play();
+  // $('#startSound').get(0).play();
+  // $('#mariachi').get(0).play();
+  } else{
+    console.log('working');
+  }
 });
 
 //loop to continuosly dissappear avos
