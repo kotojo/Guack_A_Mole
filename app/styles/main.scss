@@ -39,7 +39,7 @@ body {
   // border: 1.5px solid black;
   min-height: 600px;
   min-width: 800px;
-  // left: 20%;
+  left: 10%;
   // height: 60%;
   // top: 25%;
   position: relative;
@@ -55,6 +55,7 @@ body {
   position: absolute;
   width: 10%;
   height: 20%;
+  z-index: 5;
 }
   //change to guacamole class
 .guacamole {
@@ -83,13 +84,40 @@ body {
 }#avo6 {
   bottom: 10%;
 }
+//holes
+
+.hole {
+  width: 10%;
+  height: 15%;
+  background-image: url('../images/hole.png');
+  background: rgba(215, 129, 4, 0.8);
+  border-radius: 90%;
+  position: absolute;
+  z-index: 0;
+  -webkit-border-radius: 50px 50px;
+}
+#hole1{
+  @extend #avo1;
+}
+
+
 //Misc signange - score timer, popup at end
+.sombrero{
+  position: absolute;
+  top: -20px;
+  left: -25px;
+}
 #score {
   position: absolute;
   left: 0.01%;
   top: 0.2%;
   padding: 4px;
   width: 10%;
+}
+.startbutton{
+  left: 49%;
+  position: absolute;
+  top: 10%;
 }
 #timer {
   @extend #score;
@@ -102,7 +130,7 @@ body {
 .b-close {
 border-radius: 7px;
 font: bold 131% sans-serif;
-margin-left: 15%;
+margin-left: 5%;
 background-color: #2b91af;
 color: #fff;
 cursor: pointer;
@@ -119,4 +147,7 @@ background-color: #1e1e1e;
 }
 button{
   background: brown;
+}
+.navwrapper{
+  padding: 0;
 }

@@ -6,3 +6,4 @@ bower_components
 .DS_Store
 /app/images/
 app/DM-CGS-33.wav
+/app/sounds/

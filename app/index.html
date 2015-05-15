@@ -14,7 +14,6 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" type="text/css" href="bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/materialize/dist/css/materialize.min.css">
-        <link rel="stylesheet" type="text/css" href="bower_components/timecircles/inc/TimeCircles.css">
     <link rel="stylesheet" href="styles/main.css">
 
     <!-- endbuild -->
@@ -27,40 +26,51 @@
 
     <div class="row">
 
-      <div class="col s3 navbar">
+      <div class="col s3 navwrapper" style="padding: 0; width: 15%; text-align: center">
         <nav>
-          <ul class="right hide-on-med-and-down">
+         <!--  <ul class="right hide-on-med-and-down">
             <li><a href="#!">Home</a></li>
             <li><a href="#!">Game</a></li>
             <li><a href="#!">Contact</a></li>
-          </ul>
+          </ul> -->
+          <a href="#" class="brand-logo"><img class="sombrero" src="../images/white-sombrero-64.png"></a>
           <ul id="slide-out" class="side-nav">
             <li><a href="#!">Home</a></li>
             <li><a href="#!">Game</a></li>
             <li><a href="#!">Contact</a></li>
           </ul>
-          <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+          <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
         </nav>
       </div>
-
+      <div class="startbutton">
+        <button class="waves-effect waves-light btn" id="startbutton">
+          Start Game
+        </button>
+      </div>
       <div class="gamescreen col 9">
         <div class="card-panel teal" id="score">Score:</div>
-        <div class="card-panel teal" id="timer">Time Left:</div>
+        <div class="waves-effect waves-light btn" id="timer">Time Left:</div>
         <div class="avo" id="avo1"></div>
         <div class="avo" id="avo2"></div>
         <div class="avo" id="avo3"></div>
         <div class="avo" id="avo4"></div>
         <div class="avo" id="avo5"></div>
         <div class="avo" id="avo6"></div>
-        <audio id="sound1" src="DM-CGS-33.wav"></audio>
-        <div class="b-close" id="element_to_pop_up">Game Over!<br><br><button on click="playAgain()" id="replay">Play Again</button><br><br>Home</div>
+        <audio id="sound1" src="sounds/DM-CGS-33.wav"></audio>
+        <audio id="startSound" src="sounds/DM-CGS-18.wav"></audio>
+        <div class="b-close" id="element_to_pop_up">Game Over!<br><br><button class="waves-effect waves-light btn" id="replay">Play Again</button><br><br>Home</div>
+        <div class="hole" id="hole1"></div>
       </div>
+
   </div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
     <script src="bower_components/jquery.bpopup.min.js"></script>
+    <script src="bower_components/animateCSS/dist/jquery.animatecss.min.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
 
