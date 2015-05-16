@@ -154,7 +154,11 @@ function startGame(){
   reappear2();
 }
 
-
+var highScores = [];
+function setHighScore(){
+  highScores.push(score);
+  $('.card-content').html('Top Score: ' + highScores);
+}
 
 
 

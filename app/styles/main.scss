@@ -145,7 +145,29 @@ body {
   letter-spacing: 0.5px;
 
 }
+nav, footer.page-footer{
+  background-color: #26a69a;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+.page-footer{
+  @extend nav;
+}
+main {
+    flex: 1 0 auto;
+  }
 
+.topscore{
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+.card-title {
+  text-decoration-color:  black;
+}
 .startbutton{
   left: 49%;
   position: absolute;
