@@ -45,11 +45,25 @@
           <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
         </nav>
       </div>
+      <!-- BUTTONS -->
+  <div class="gamebuttons navwrapper">
       <div class="startbutton">
         <button class="waves-effect waves-light btn" id="startbutton">
           Start Game
         </button>
       </div>
+   <!-- Dropdown Trigger -->
+  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Difficulty</a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a id="easy" href="#!">Easy</a></li>
+    <li><a id="medium" href="#!">Medium</a></li>
+    <li class="divider"></li>
+    <li><a id="fast"href="#!">Fast</a></li>
+  </ul>
+  </div>
+<!-- GAME CONTENT -->
       <div class="gamescreen col 9">
         <div class="scorecard" id="score">Score:</div>
         <div class="waves-effect waves-light btn" id="timer">Time Left:</div>
@@ -69,30 +83,24 @@
         <div class="hole" id="hole4"></div>
         <div class="hole" id="hole5"></div>
         <div class="hole" id="hole6"></div>
+        <div class="hideTaco"></div>
       </div>
-    <!-- Dropdown Trigger -->
-  <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Difficulty</a>
 
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li><a id="easy" href="#!">Easy</a></li>
-    <li><a id="medium" href="#!">Medium</a></li>
-    <li class="divider"></li>
-    <li><a id="fast"href="#!">Fast</a></li>
-  </ul>
+
+
 
 <!-- high score card -->
-        <div class="col s3 topscore">
-          <div class="card">
+        <div class="col s3" id="topscore">
+          <div class="topscore card">
             <div class="card-image">
               <img src="images/sourcreamplatterlarge.png">
-              <span class="card-title">High Scores</span>
+              <span style="color: #ffab40" class="highscore card-title">High Scores</span>
             </div>
             <div class="card-content">
 
             </div>
             <div class="card-action">
-              <a href="#">Tweet it your high score</a>
+              <a href="http://twitter.com/home?status=I got the high score playing Guac-A-Mole @tropicColin" target="_blank">Tweet it</a>
 
             </div>
           </div>

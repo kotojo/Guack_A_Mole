@@ -10,6 +10,8 @@ var easySeconds;
 var mediumSeconds;
 var fastSeconds;
 var showAvos;
+var tacoSeconds = 18;
+
  $('.button-collapse').sideNav();
 disappear();
 //handles the dissapearnce
@@ -148,17 +150,51 @@ $('#fast').click(function(){
 function startShow(){
     showAvos = setInterval(randomShow, userInput);
 }
-function startGame(){
-  startShow(userInput);
-  myTimer = setInterval(timer, 1000);
-  reappear2();
-}
+
 
 var highScores = [];
 function setHighScore(){
   highScores.push(score);
   $('.card-content').html('Top Score: ' + highScores);
 }
+
+//Add flying tacos
+
+function justAddTacos(){
+  $('.hideTaco').addClass('taco');
+  $('.taco').removeClass('hideTaco');
+console.log('tacos');
+}
+
+
+function tacoTimer(){
+  tacoSeconds --;
+  console.log(tacoSeconds);
+}
+
+
+function moveTacos(){
+  justAddTacos();
+$( '.taco' ).animate({ "left": 700 }, 18000 );
+if(tacoSeconds === 0) {
+   $('.taco').addClass('hideTaco');
+   $('.hideTaco').removeClass('taco');
+   console.log('hid taco');
+  }
+}
+function startGame(){
+  startShow(userInput);
+  myTimer = setInterval(timer, 1000);
+  reappear2();
+  moveTacos();
+  tacoTimer();
+  setInterval(tacoSeconds, 1000);
+}
+
+// function hideTacos(){
+
+// }
+
 
 
 

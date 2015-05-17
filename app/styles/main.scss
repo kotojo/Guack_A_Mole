@@ -4,6 +4,8 @@
 //vars
 $avoimage : url("../images/avo.png");
 $guacImage : url("../images/guac.png");
+$tacoImage : url("../images/Taco.png");
+$happyTaco : url("../images/Tacohappy.png");
 body {
   background: url('../images/triangular.png');
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -148,51 +150,56 @@ body {
 nav, footer.page-footer{
   background-color: #26a69a;
 }
+nav {
+  position: absolute;
+  left: 0;
+  width: 20vw;
+}
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
-.page-footer{
-  @extend nav;
-}
-main {
-    flex: 1 0 auto;
-  }
+
+
 
 .topscore{
   position: absolute;
   top: 30%;
-  left: 10%;
+  left: 1%;
+  width: 15vw;
+  height: 40vw;
+
 }
-.card-title {
-  text-decoration-color:  black;
+.highscore{
+  color: #ffab40;
+  top: 7vw;
 }
-.startbutton{
-  left: 49%;
+
+//Buttons
+.gamebuttons{
+  top: 5%;
   position: absolute;
-  top: 10%;
+  left: 55%;
 }
-.dropdown-button {
-  @extend .startbutton;
-  left: 63%;
+#startbutton{
+  right: 120%;
+  position: absolute;
+}
+#dropdown1{
+  position: absolute;
+  left: 5%;
 }
 #timer {
   @extend #score;
   left: 40%;
   width: 19%;
 }
-.scorecard{
-  border: none;
-  border-radius: 2px;
-  display: inline-block;
-  height: 36px;
-  line-height: 36px;
-}
 
- #element_to_pop_up {
+#element_to_pop_up {
   display:none;
 }
+
 .b-close {
 border-radius: 7px;
 font: bold 131% sans-serif;
@@ -205,15 +212,39 @@ text-decoration: none;
 position: absolute;
 width: 30%;
 height: 30%;
-// right: -7px;
-// top: -7px;
+
 }
+
 .b-close:hover {
 background-color: #1e1e1e;
 }
+
 button{
   background: brown;
 }
 .navwrapper{
   padding: 0;
+}
+
+//tacos//
+.hideTaco{
+  display: none;
+}
+.taco{
+  background: $tacoImage;
+  z-index: 6;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+}
+//some Media queries
+@media (max-width: 650px){
+  .sombrero{
+    display: none;
+  }
+}
+@media (max-width: 990px){
+  .topscore {
+    display: none;
+  }
 }
