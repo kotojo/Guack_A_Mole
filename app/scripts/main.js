@@ -2,7 +2,7 @@
 
 $(function(){
 var score = 0;
-var runTime = 8;
+var runTime = 30;
 var gameTime = runTime;
 var userInput;
 var myTimer;
@@ -122,7 +122,7 @@ $('#startbutton').click(function(){
   startGame();
   console.log('start clicked');
   $('#startSound').get(0).play();
-  // $('#mariachi').get(0).play();
+  $('#mariachi').get(0).play();
   } else{
     console.log('working');
   }
