@@ -2,7 +2,7 @@
 
 $(function(){
 var score = 0;
-var runTime = 30;
+var runTime = 8;
 var gameTime = runTime;
 var userInput;
 var myTimer;
@@ -11,21 +11,21 @@ var mediumSeconds;
 var fastSeconds;
 var showAvos;
 var tacoSeconds = 18;
-
+var highScores = [];
+var arrayHTML = [];
  $('.button-collapse').sideNav();
-disappear();
+
 //handles the dissapearnce
   function disappear() {
     $('.guacamole').removeClass('guacamole').addClass('disappear');
     $('.avo').removeClass('avo').addClass('disappear');
-     console.log('stuff');
   }
+  disappear();
 //handles the reappearnace
   function reappear2(){
   $('div').each(function(){
     if($(this).hasClass('disappear')){
       $(this).addClass('avo').removeClass('disappear');
-      console.log('reset');
     }
   });
   }
@@ -37,7 +37,7 @@ function handleClick(id){
     setTimeout(disappear, 1000);
     setTimeout(reappear2, 3000);
     score++;
-    console.log(score);
+    // console.log(score);
     printScore();
     $('#sound1').get(0).play();
   });
@@ -76,16 +76,16 @@ function randomShow(){
 }
 function printScore(){
   $('#score').html('Score: ' + score);
-  console.log(score);
 }
 
 function timer(){
   gameTime--;
+  // console.log(gameTime);
   $('#timer').html('Time Left: ' + gameTime + ' sec');
   if(gameTime === 0){
     clearInterval(myTimer);
-    console.log(gameTime);
     popupEndGame();
+    setHighScore();
   }
 }
 //resets score and time and clears scoreboard
@@ -122,7 +122,7 @@ $('#startbutton').click(function(){
   startGame();
   console.log('start clicked');
   $('#startSound').get(0).play();
-  $('#mariachi').get(0).play();
+  // $('#mariachi').get(0).play();
   } else{
     console.log('working');
   }
@@ -150,12 +150,17 @@ $('#fast').click(function(){
 function startShow(){
     showAvos = setInterval(randomShow, userInput);
 }
+//High scores function. empty array is defined at top!
 
 
-var highScores = [];
 function setHighScore(){
   highScores.push(score);
-  $('.card-content').html('Top Score: ' + highScores);
+  for(var i = 0; i < highScores.length; i ++){
+   // $('.card-content').html(highScores[i] + '\n');
+   arrayHTML.push('<span>' + highScores[i] + '</span><br>');
+   $('.card-content').html(arrayHTML.join('<br>'));
+   console.log(arrayHTML);
+  }
 }
 
 //Add flying tacos
@@ -175,7 +180,7 @@ function tacoTimer(){
 
 function moveTacos(){
   justAddTacos();
-$( '.taco' ).animate({ "left": 700 }, 18000 );
+$( '.taco' ).animate({ 'left': 700 }, 18000 );
 if(tacoSeconds === 0) {
    $('.taco').addClass('hideTaco');
    $('.hideTaco').removeClass('taco');
