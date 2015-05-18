@@ -5,6 +5,7 @@ You score points by clicking on avacados which turn into guacamole. It is a time
 
 ## Technologies used:
 HTML5/CSS3<br>
+SASS<br>
 jQuery <br>
 Javascript<br>
 Materizlize CSS<br>
