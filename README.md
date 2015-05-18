@@ -23,3 +23,7 @@ Bower<br>
 [Deployed on Bitbaloon](http://biographer-susan-40880.bitballoon.com/#!)
 
 [Wireframe](https://drive.google.com/file/d/0B_YoUd2s-BqxVGZfdDJkOUVIdFU/view?usp=sharing)
+
+<br><br>
+<a href="https://twitter.com/tropicColin" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @tropicColin</a>
+
