@@ -17,8 +17,8 @@ Bower<br>
 
 [GitHub Repo](https://github.com/ColinRTaylor/Guack_A_Mole)
 
-[Trello Board]()
+[Trello Board](https://trello.com/b/l9cbhry9/guack-a-mole)
 
-[Deployed on Bitbaloon]()
+[Deployed on Bitbaloon](http://biographer-susan-40880.bitballoon.com/#!)
 
 [Wireframe](https://drive.google.com/file/d/0B_YoUd2s-BqxVGZfdDJkOUVIdFU/view?usp=sharing)
