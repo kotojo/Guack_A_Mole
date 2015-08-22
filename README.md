@@ -1,7 +1,9 @@
 # **Overview:**
 Guack-A-Mole is a whack-a-mole style game with an avacado flair.
 
-You score points by clicking on avacados which turn into guacamole. It is a timed game and you can change the speed that the avacados appear and disappear with the difficutly button
+You score points by clicking on avacados which turn into guacamole. It is a timed game and you can change the speed that the avacados appear and disappear with the difficutly button. The game keeps score and the  scores are added to a scores board after you finish a game. There is no back end so the scores are only there for each session.
+
+To run locally, clone this repo and run `bower install` and then `grunt serve`
 
 ## Technologies used:
 HTML5/CSS3<br>
